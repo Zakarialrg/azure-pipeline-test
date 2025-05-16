@@ -2,11 +2,14 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
 
 steps:
 - script: echo "Build started"
+  displayName: 'Start message'
+
 - script: python hello.py
+  displayName: 'Run hello.py'
+
 - script: echo "Pipeline finished"
-
-
+  displayName: 'End message'
